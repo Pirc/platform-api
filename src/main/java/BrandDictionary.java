@@ -6,7 +6,7 @@ package pirc.platform.api;
  * a service that we use for parsing brand names out of arbitrary chunks of
  * text.
  */
-public interface BrandDictionary {
+public interface BrandDictionary extends TokenDictionary {
     Brand lookupEntry(String brandName);
     void addEntry(String brandName);
     void blockEntry(String brandName);
