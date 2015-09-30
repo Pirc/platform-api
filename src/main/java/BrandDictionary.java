@@ -8,7 +8,10 @@ package pirc.platform.api;
  */
 public interface BrandDictionary extends TokenDictionary {
     Brand lookupEntry(String brandName);
-    void addEntry(String brandName);
-    void blockEntry(String brandName);
-    void removeEntry(String brandName);
+
+   /**
+    * @throws BlockedBrandException if this is an attempt to add a brand
+    *  back into the dictionary that has been blocked.
+    */
+    Brand addEntry(String brandName);
 }
