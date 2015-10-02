@@ -1,17 +1,21 @@
 package pirc.platform.api;
 
 public interface Brand {
+   /**
+    * This is the display name for this brand entry, which is the string
+    * that should be used to display this brand in user-facing applications.
+    */
     String getDisplayName();
 
    /**
-    * Adds another brand as a synonym to this one.  Brand synonyms provide
-    * us with the capability to understand many different possible spellings
-    * or "nick names" for a Brand while still being able to understand that
-    * the different expressions of the brand name are still actually 
-    * referring to the same brand.  The classic use case here is that you 
-    * want a coupon for Coke to match a sale on Coca-Cola.
+    * Adds new dictionary entry as a synonym to this one.  Brand synonyms 
+    * provide us with the capability to understand many different possible 
+    * spellings or "nick names" for a Brand while still being able to 
+    * understand that the different expressions of the brand name are 
+    * still actually referring to the same brand.  The classic use case 
+    * here is that you want a coupon for Coke to match a sale on Coca-Cola.
     */
-    void addSynonym(Brand synonym);
+    void addSynonym(String synonym);
 
    /**
     * Remove this brand from the brand dictionary.
