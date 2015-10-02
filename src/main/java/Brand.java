@@ -20,7 +20,7 @@ public interface Brand {
    /**
     * Remove this brand from the brand dictionary.
     */
-    void remove();
+    void removeEntry();
 
    /**
     * The block method is used to remove a Brand from the Brand dictionary
@@ -31,5 +31,5 @@ public interface Brand {
     * case, but if it does happen we may want to be sure that we don't
     * re-add something that has already been removed for a reason.
     */
-    void block();
+    void blockEntry();
 }
