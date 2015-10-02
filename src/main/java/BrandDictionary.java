@@ -21,8 +21,9 @@ public interface BrandDictionary extends TokenDictionary {
     * brand dictionary and return it to the caller.  If the entry
     * already exists, the existing brand dictionary entry is returned.
     *
-    * @throws BlockedBrandException if this is an attempt to add a brand
-    *  back into the dictionary that has been blocked.
+    * @throws pirc.platform.api.ex.BlockedBrandException if this is 
+    *  an attempt to add a brand back into the dictionary that has 
+    *  been blocked.
     */
     Brand addEntry(String displayName);
 }
